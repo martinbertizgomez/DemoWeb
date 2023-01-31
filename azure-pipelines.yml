@@ -46,3 +46,10 @@ steps:
     artifactName: 'Martin_drop'
     downloadPath: '$(System.ArtifactsDirectory)'
 
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Azure subscription 1(45ba1857-246c-4f57-ae21-b083dc493d44)'
+    appType: 'webApp'
+    WebAppName: 'webappdemomartin'
+    packageForLinux: '$(System.ArtifactsDirectory)/Martin_drop/*.zip'
