@@ -9,7 +9,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            Hello type your name and press button:<br />
+            Hello please type your name and press button:<br />
             <br />
             <br />
             <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
