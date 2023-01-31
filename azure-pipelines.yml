@@ -38,3 +38,11 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'Martin_drop'
     publishLocation: 'Container'
+
+- task: DownloadBuildArtifacts@1
+  inputs:
+    buildType: 'current'
+    downloadType: 'single'
+    artifactName: 'Martin_drop'
+    downloadPath: '$(System.ArtifactsDirectory)'
+
